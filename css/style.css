@@ -1,0 +1,101 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    /* display: flex; */
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.cars{
+    height: 400px;
+    width: 650px;
+    margin-left: 90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+section.cars .card-wrapper{
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-row-gap: 6rem;
+}
+.card-wrapper #Sedans{
+    background-color: hsl(31, 77%, 52%);
+}
+.card-wrapper #SUVs{
+    background-color: hsl(184, 100%, 22%);
+}
+.card-wrapper #Luxury{
+    background-color: hsl(179, 100%, 13%);
+}
+section.cars .card-wrapper .singlecard{
+    padding: 2rem 2rem;
+    position: relative;
+    padding-top: 3rem;
+    text-align: center;
+}
+section.cars .card-wrapper .singlecard img{
+    max-width: 35px;
+    margin-left: -170px;
+    margin-top: -10px;
+}
+section.cars .card-wrapper .singlecard h2{
+    margin: 10px;
+    padding-bottom: 10px;
+    color: hsl(0, 0%, 95%);
+    text-transform: uppercase;
+    text-align: left;
+    font-size: 20px;
+    font-weight: 700;
+}
+section.cars .card-wrapper .singlecard p{
+    color:hsla(0, 0%, 100%, 0.75);
+    text-align: left;
+}
+section.cars .card-wrapper .singlecard a{
+    width: 95px;
+    height: 25px;
+    background-color: hsl(0, 0%, 95%);
+    color: hsl(31, 77%, 52%);
+    margin-top: 2rem;
+    float: left;
+    border-radius: 80px;
+    text-decoration: none;
+}
+section.cars .card-wrapper .singlecard #second{
+    color:hsl(184, 100%, 22%);
+}
+section.cars .card-wrapper .singlecard #lux{
+    color:hsl(179, 100%, 13%);
+}
+footer{
+    position: fixed;
+    bottom: 0;
+    left: 35%;
+    background-color: hsl(0, 0%, 95%);
+}
+
+
+@media (max-width: 750px) {
+    section.cars .card-wrapper{
+        margin-top: 460px;
+        grid-template-columns: repeat(2, 1fr);
+        max-width: 400px;
+    }
+}
+
+@media(max-width: 620px){
+    section.cars .card-wrapper{
+        margin-top: 860px;
+        grid-template-columns: repeat(1, 1fr);
+        max-width: 200px;
+    }
+    section.cars .card-wrapper .singlecard{
+        text-align: center;
+    }
+}
+
+/* https://www.frontendmentor.io/challenges/3column-preview-card-component-pH92eAR2-/hub/3column-preview-card-component-uCKhXs0ek */
